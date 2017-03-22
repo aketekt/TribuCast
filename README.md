@@ -7,5 +7,8 @@
 - ```babel-core```
 - ```babel-cli```
 - ```babel-presets-es2015```
+- ```immutable```
+**Testing:**
 - ```mocha chai```
+- ```chai-immutable```
 
