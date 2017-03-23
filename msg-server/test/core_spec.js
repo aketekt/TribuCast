@@ -8,21 +8,20 @@ describe('appication logic', () => {
     describe('addMessage', () => {
 
         it('adds messages to the state', () => {
-            const state = Map(text, messageId, location);
+            const state = Map(text, messageId, sentFrom, createdAt);
             const text = ('Hello');
             const messageId = ('fds');
-            const location = ('1223');
-            const nextState = addMessage(state, text, messageId, location);
+            const sentFrom = ('1223');
+            const createdAt = (toString(new Date()));
+            const nextState = addMessage(state, text, messageId, sentFrom, createdAt);
             expect(nextState).to.equal(Map({
                 message: Map({
                     text: ('Hello'),
                     messageId: ('fds'),
-                    location: ('1223')
-
+                    sentFrom: ('1223'),
+                    createdAt: (toString(new Date())) 
                 })
-              
             }));
         });
-
     });
 });
